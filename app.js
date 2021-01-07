@@ -16,3 +16,22 @@ printOdds(-290);
 
 // Exercise 2 Section
 console.log("EXERCISE 2:\n==========\n");
+let userAge;
+
+function checkAge(age) {
+	let aboveSixteen = "You can drive!";
+	let belowSixteen = "Sorry, but you need to wait until you're sixteen";
+
+	if (age && typeof parseInt(age) == typeof 1) {
+		if (age < 16) console.log(belowSixteen);
+		if (age >= 16) console.log(aboveSixteen);
+		return false;
+	} else {
+		console.log("Please enter your age as a number.");
+		return true;
+	}
+}
+
+do {
+	userAge = prompt("Please enter your age");
+} while (checkAge(userAge));
